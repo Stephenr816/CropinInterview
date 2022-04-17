@@ -21,7 +21,12 @@ public class DriverFactory {
 
 	WebDriver driver;
 	Properties prop;
-
+	
+	/**
+	 * 
+	 * @param browserName
+	 * @return This method returns the driver
+	 */
 	public WebDriver init_driver(String browserName) {
 
 		if (browserName.equals("chrome")) {
