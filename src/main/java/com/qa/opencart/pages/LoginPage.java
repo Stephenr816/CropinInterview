@@ -4,9 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import com.qa.opencart.utils.ElementUtil;
+
 public class LoginPage {
 	
-	WebDriver driver;
+	private WebDriver driver;
+	private ElementUtil elementUtil;
 	
 	//1. Private Locators
 
@@ -20,30 +23,31 @@ public class LoginPage {
 	public LoginPage(WebDriver driver) {
 		
 		this.driver= driver;
+		elementUtil = new ElementUtil(driver);
 	}
 	
 	//3. Public page actions (methods)
 	
 	public String getLoginPageTitle() {
 		
-		return driver.getTitle();
+		return elementUtil.doGetTitle();
 	}
 	
 	public String getLoginPageUrl() {
 		
-		return driver.getCurrentUrl();
+		return elementUtil.getPageUrl();
 	}
 	
 	public boolean isForgotPwdLinkExist() {
 		
-		return driver.findElement(forgotPwdLink).isDisplayed();
+		return elementUtil.doIsDisplayed(forgotPwdLink);
 	}
 	
 	public void doLogin(String un, String pwd) {
 		
-		driver.findElement(username).sendKeys("stephenr816@gmail.com");
-		driver.findElement(password).sendKeys("stephen@123");
-		driver.findElement(loginButton).click();
+		elementUtil.doSendKeys(username, un);
+		elementUtil.doSendKeys(password, pwd);
+		elementUtil.doClick(loginButton);
 	}
    
 }

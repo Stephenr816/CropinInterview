@@ -27,7 +27,9 @@ public class DriverFactory {
 	 * @param browserName
 	 * @return This method returns the driver
 	 */
-	public WebDriver init_driver(String browserName) {
+	public WebDriver init_driver(Properties prop) {
+		
+		String browserName = prop.getProperty("browser").trim();
 
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -46,7 +48,7 @@ public class DriverFactory {
 
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.get("https://demo.opencart.com/index.php?route=account/login");
+		driver.get(prop.getProperty("url").trim());
 
 		return driver;
 
