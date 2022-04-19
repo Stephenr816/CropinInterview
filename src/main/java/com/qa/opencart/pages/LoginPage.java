@@ -43,11 +43,12 @@ public class LoginPage {
 		return elementUtil.doIsDisplayed(forgotPwdLink);
 	}
 	
-	public void doLogin(String un, String pwd) {
+	public AccountsPage doLogin(String un, String pwd) {
 		
 		elementUtil.doSendKeys(username, un);
 		elementUtil.doSendKeys(password, pwd);
 		elementUtil.doClick(loginButton);
+		return new AccountsPage(driver);
 	}
    
 }

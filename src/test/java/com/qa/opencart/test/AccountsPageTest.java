@@ -1,10 +1,22 @@
 package com.qa.opencart.test;
 
-public class AccountsPageTest {
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+import com.qa.opencart.base.BaseTest;
 
+public class AccountsPageTest extends BaseTest{
+	
+	@BeforeClass
+	public void accPageSetup() {
+		
+		accPage = lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+	}
+
+	@Test
+	public void accPageTitleTest() {
+		
+		accPage.getAccPageTitle();
 	}
 
 }
