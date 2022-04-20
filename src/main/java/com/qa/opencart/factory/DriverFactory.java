@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -33,7 +34,10 @@ public class DriverFactory {
 
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless", "--window-size=1920,1200");
+			options.addArguments("--disable-blink-features=AutomationControlled");
+			driver = new ChromeDriver(options);
 		} else if (browserName.equals("firefox")) {
 
 			WebDriverManager.firefoxdriver().setup();

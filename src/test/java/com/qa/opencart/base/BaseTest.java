@@ -24,7 +24,7 @@ public class BaseTest {
 		prop = df.init_properties();
 		driver = df.init_driver(prop);
 		lp=new LoginPage(driver);
-		
+
 	}
 	
 	
