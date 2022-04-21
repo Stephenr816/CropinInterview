@@ -3,12 +3,15 @@ package com.qa.opencart.factory;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -33,11 +36,10 @@ public class DriverFactory {
 		String browserName = prop.getProperty("browser").trim();
 
 		if (browserName.equals("chrome")) {
+			
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--headless", "--window-size=1920,1200");
-			options.addArguments("--disable-blink-features=AutomationControlled");
-			driver = new ChromeDriver(options);
+			driver = new ChromeDriver();
+			
 		} else if (browserName.equals("firefox")) {
 
 			WebDriverManager.firefoxdriver().setup();

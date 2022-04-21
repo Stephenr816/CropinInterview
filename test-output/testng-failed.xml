@@ -6,9 +6,8 @@
       <class name="com.qa.opencart.test.AccountsPageTest">
         <methods>
           <include name="setUp"/>
-          <include name="accPageTitleTest"/>
           <include name="AccountPageSectionListTest"/>
-          <include name="accPageHeaderTest"/>
+          <include name="accPageTitleTest"/>
           <include name="accPageUrlTest"/>
           <include name="accPageSetup"/>
           <include name="tearDown"/>

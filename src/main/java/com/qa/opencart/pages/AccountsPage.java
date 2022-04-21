@@ -17,15 +17,17 @@ public class AccountsPage {
 	//Private By Locators
 
 	private By accSections = By.xpath("//div[@id='content']//h2");
-	private By accPageHeader = By.xpath("//a[text()='Your Store']");
+	private By accPageHeader = By.xpath("//a//img[@title='Antropy Demo Store']");
 	private By logoutLink = By.xpath("//div[@class='list-group']//a[text()='Logout']");
-	
+	private By searchBar = By.xpath("//div[@id='search']/input");
+	private By searchButton = By.xpath("//div[@id='search']//button");
 	
 	//Constructor
 	
 	public AccountsPage(WebDriver driver) {
 		
 		elementUtil = new ElementUtil(driver);
+		this.driver = driver;
 	}
 	
 	//Public page Actions
@@ -40,10 +42,6 @@ public class AccountsPage {
 		return elementUtil.getPageUrl();
 	}
 	
-	public String getAccountPageHeader() {
-		
-		return elementUtil.doGetText(accPageHeader);
-	}
 	
 	public List<String> getAccountPageSectionList() {
 		
@@ -52,6 +50,7 @@ public class AccountsPage {
 		List<WebElement> accSecList = elementUtil.getElements(accSections);
 		
 		for (WebElement e : accSecList) {
+			
 			
 			accSecValList.add(e.getText());
 			
@@ -63,5 +62,12 @@ public class AccountsPage {
 	public boolean isLogoutExist() {
 		
 		return elementUtil.doIsDisplayed(logoutLink);
+	}
+	
+	public SearchResultsPage searchProduct(String productName) {
+		
+		elementUtil.doSendKeys(searchBar, "IMac");
+		elementUtil.doClick(searchButton);
+		return new SearchResultsPage(driver);
 	}
 }

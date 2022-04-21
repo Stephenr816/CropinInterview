@@ -10,7 +10,7 @@ public class Constants {
 	
 	public static final String ACCOUNTS_PAGE_TITLE = "My Account";
 	public static final String ACCOUNTS_PAGE_URL = "account/account";
-	public static final String ACCOUNTS_PAGE_HEADER = "Your Store";
-	public static final List<String> ACCOUNTS_SEC_LIST = Arrays.asList("My Account", "My Orders", "My Affiliate Account", "Newsletter");
+	public static final String ACCOUNTS_PAGE_HEADER = "Antropy Demo Store";
+	public static final List<String> ACCOUNTS_SEC_LIST = Arrays.asList("My Account", "My Orders", "Newsletter");
 
 }

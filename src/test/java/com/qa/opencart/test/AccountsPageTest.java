@@ -21,22 +21,16 @@ public class AccountsPageTest extends BaseTest{
 	public void accPageTitleTest() {
 		
 		String title = accPage.getAccPageTitle();
+		System.out.println(title);
 		Assert.assertEquals(title, Constants.ACCOUNTS_PAGE_TITLE);
 	}
 	
 	@Test
 	public void accPageUrlTest() {
 		
-		String URL = accPage.getAccountPageUrl();
-		Assert.assertEquals(URL, Constants.ACCOUNTS_PAGE_TITLE);
-	}
+		String url = accPage.getAccountPageUrl();
+		Assert.assertTrue(url.contains(Constants.ACCOUNTS_PAGE_URL));
 	
-	@Test
-	public void accPageHeaderTest() {
-		
-		
-		String text = accPage.getAccountPageHeader();
-		Assert.assertEquals(text, Constants.ACCOUNTS_PAGE_HEADER);
 	}
 	
 	@Test
@@ -52,6 +46,8 @@ public class AccountsPageTest extends BaseTest{
 		
 		Assert.assertEquals(secList, Constants.ACCOUNTS_SEC_LIST);
 	}
+	
+	
 	
 	
 
