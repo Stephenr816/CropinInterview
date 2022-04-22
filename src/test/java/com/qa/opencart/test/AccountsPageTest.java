@@ -18,8 +18,9 @@ public class AccountsPageTest extends BaseTest{
 	}
 
 	@Test
-	public void accPageTitleTest() {
+	public void accPageTitleTest() throws InterruptedException {
 		
+		Thread.sleep(2000);
 		String title = accPage.getAccPageTitle();
 		System.out.println(title);
 		Assert.assertEquals(title, Constants.ACCOUNTS_PAGE_TITLE);
@@ -28,6 +29,7 @@ public class AccountsPageTest extends BaseTest{
 	@Test
 	public void accPageUrlTest() {
 		
+		
 		String url = accPage.getAccountPageUrl();
 		Assert.assertTrue(url.contains(Constants.ACCOUNTS_PAGE_URL));
 	
@@ -35,6 +37,7 @@ public class AccountsPageTest extends BaseTest{
 	
 	@Test
 	public void AccountPageSectionListTest() {
+		
 		
 		List<String> secList = accPage.getAccountPageSectionList();
 		

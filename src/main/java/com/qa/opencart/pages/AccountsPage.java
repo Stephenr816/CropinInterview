@@ -66,7 +66,7 @@ public class AccountsPage {
 	
 	public SearchResultsPage searchProduct(String productName) {
 		
-		elementUtil.doSendKeys(searchBar, "IMac");
+		elementUtil.doSendKeys(searchBar, productName);
 		elementUtil.doClick(searchButton);
 		return new SearchResultsPage(driver);
 	}
