@@ -26,6 +26,7 @@ public class DriverFactory {
 	WebDriver driver;
 	Properties prop;
 	OptionsManager op;
+	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 	
 	/**
 	 * 
@@ -41,12 +42,14 @@ public class DriverFactory {
 		if (browserName.equals("chrome")) {
 			
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(op.getChromeOptions());
+			tlDriver.set(new ChromeDriver(op.getChromeOptions()));
+			//driver = new ChromeDriver(op.getChromeOptions());
 			
 		} else if (browserName.equals("firefox")) {
 
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver(op.getFirefoxOptions());
+			tlDriver.set(new FirefoxDriver(op.getFirefoxOptions()));
+			//driver = new FirefoxDriver(op.getFirefoxOptions());
 			
 		} else if (browserName.equals("safari")) {
 
@@ -56,12 +59,17 @@ public class DriverFactory {
 			System.out.println("Please pass the correct browser Name");
 		}
 
-		driver.manage().window().maximize();
-		driver.manage().deleteAllCookies();
-		driver.get(prop.getProperty("url").trim());
+		getDriver().manage().window().maximize();
+		getDriver().manage().deleteAllCookies();
+		getDriver().get(prop.getProperty("url").trim());
 
-		return driver;
+		return getDriver();
 
+	}
+	
+	public static synchronized WebDriver getDriver() {
+		
+		return tlDriver.get();
 	}
 	
 	public Properties init_properties() {
