@@ -25,6 +25,7 @@ public class DriverFactory {
 
 	WebDriver driver;
 	Properties prop;
+	OptionsManager op;
 	
 	/**
 	 * 
@@ -33,17 +34,20 @@ public class DriverFactory {
 	 */
 	public WebDriver init_driver(Properties prop) {
 		
+		op = new OptionsManager(prop);
+		
 		String browserName = prop.getProperty("browser").trim();
 
 		if (browserName.equals("chrome")) {
 			
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(op.getChromeOptions());
 			
 		} else if (browserName.equals("firefox")) {
 
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(op.getFirefoxOptions());
+			
 		} else if (browserName.equals("safari")) {
 
 			driver = new SafariDriver();

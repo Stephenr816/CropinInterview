@@ -5,10 +5,13 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.qa.opencart.base.BaseTest;
 
 public class ProductInfoPageTest extends BaseTest {
+	
+	SoftAssert softAssert = new SoftAssert();
 	
 	@BeforeClass
 	public void productInfoSetup() {
@@ -35,7 +38,7 @@ public class ProductInfoPageTest extends BaseTest {
 	public void productImagesTest() {
 		
 		searchResPage = accPage.searchProduct("Macbook");
-		productInfoPage = searchResPage.selectProductFromResults("Macbook Pro");
+		productInfoPage = searchResPage.selectProductFromResults("MacBook Pro");
 		Assert.assertTrue(productInfoPage.getProductImagesCount() == 4);
 	}
 	
@@ -44,15 +47,18 @@ public class ProductInfoPageTest extends BaseTest {
 		Thread.sleep(5000);
 		searchResPage = accPage.searchProduct("Macbook");
 		Thread.sleep(5000);
-		productInfoPage = searchResPage.selectProductFromResults("Macbook Pro");
+		productInfoPage = searchResPage.selectProductFromResults("MacBook Pro");
 		Thread.sleep(5000);
 		Map<String, String> actProductMetaData = productInfoPage.getProductInformations();
 		
 		actProductMetaData.forEach((k,v) -> System.out.println(k + " " + v));
 		
-		String name = actProductMetaData.get("name");
-		System.out.println(name);
+		softAssert.assertEquals(actProductMetaData.get("name"), "MacBook Pro");
+		softAssert.assertEquals(actProductMetaData.get("Brand"), "Apple");
+		softAssert.assertEquals(actProductMetaData.get("Availability"), "In Stock");
+		softAssert.assertEquals(actProductMetaData.get("price"), "$2000");	
 		
+		softAssert.assertAll();
 	}
 
 }
