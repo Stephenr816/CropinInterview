@@ -56,7 +56,7 @@ public class ProductInfoPageTest extends BaseTest {
 		softAssert.assertEquals(actProductMetaData.get("name"), "MacBook Pro");
 		softAssert.assertEquals(actProductMetaData.get("Brand"), "Apple");
 		softAssert.assertEquals(actProductMetaData.get("Availability"), "In Stock");
-		softAssert.assertEquals(actProductMetaData.get("price"), "$2000");	
+		softAssert.assertEquals(actProductMetaData.get("price"), "$2000.00");	
 		
 		softAssert.assertAll();
 	}

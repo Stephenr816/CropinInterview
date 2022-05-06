@@ -30,7 +30,9 @@ public List<WebElement> getElements(By locator) {
 
 public void doSendKeys(By locator, String value) {
 	
-	getElement(locator).sendKeys(value);
+	WebElement element = getElement(locator);
+	element.clear();
+	element.sendKeys(value);
 
 }
 
