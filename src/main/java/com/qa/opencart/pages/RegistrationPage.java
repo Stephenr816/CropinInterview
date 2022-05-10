@@ -72,6 +72,9 @@ public class RegistrationPage {
 			
 			WebElement logoutLink = driver.findElement(By.xpath("//div[@class='list-group']/a[text()='Logout']"));
 			
+		}else {
+			
+			
 		}
 	}
 	
