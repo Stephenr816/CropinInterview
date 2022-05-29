@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Open_Cart_Test_Regression_Suite" class="navigator-link ">
-                    <span>E:\SeleniumTrainingWorkspace\CropinInterview\src\test\resources\testrunners\testng_regression.xml</span>
+                    <span>C:\Users\hivepro\eclipse-workspace\POM\src\test\resources\testrunners\testng_regression.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
+                    <span class="method-stats">11 methods, 4 failed,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,6 +102,21 @@
                       <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" class="show-methods failed suite-Open_Cart_Test_Regression_Suite"> (show)</a> <!-- show-methods failed suite-Open_Cart_Test_Regression_Suite -->
                     </span>
                     <div class="method-list-content failed suite-Open_Cart_Test_Regression_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.AccountsPageTest" class="method navigator-link" hash-for-method="AccountPageSectionListTest">AccountPageSectionListTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.AccountsPageTest" class="method navigator-link" hash-for-method="accPageTitleTest">accPageTitleTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.AccountsPageTest" class="method navigator-link" hash-for-method="accPageUrlTest">accPageUrlTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.ProductInfoPageTest" class="method navigator-link" hash-for-method="getProductInfoTest">getProductInfoTest</a> <!-- method navigator-link -->
@@ -116,21 +131,6 @@
                       <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" class="show-methods passed suite-Open_Cart_Test_Regression_Suite"> (show)</a> <!-- show-methods passed suite-Open_Cart_Test_Regression_Suite -->
                     </span>
                     <div class="method-list-content passed suite-Open_Cart_Test_Regression_Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.AccountsPageTest" class="method navigator-link" hash-for-method="AccountPageSectionListTest">AccountPageSectionListTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.AccountsPageTest" class="method navigator-link" hash-for-method="accPageTitleTest">accPageTitleTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.AccountsPageTest" class="method navigator-link" hash-for-method="accPageUrlTest">accPageUrlTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Open_Cart_Test_Regression_Suite" title="com.qa.opencart.test.LoginPageTest" class="method navigator-link" hash-for-method="doLoginTest">doLoginTest</a> <!-- method navigator-link -->
@@ -181,6 +181,127 @@
           <div class="suite-Open_Cart_Test_Regression_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">com.qa.opencart.test.AccountsPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AccountPageSectionListTest">
+                  </a> <!-- AccountPageSectionListTest -->
+                  <span class="method-name">AccountPageSectionListTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: lists don&apos;t have the same size expected [3] but found [2]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1240)
+	at org.testng.Assert.assertEquals(Assert.java:1465)
+	at org.testng.Assert.assertEquals(Assert.java:1441)
+	at com.qa.opencart.test.AccountsPageTest.AccountPageSectionListTest(AccountsPageTest.java:55)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="accPageTitleTest">
+                  </a> <!-- accPageTitleTest -->
+                  <span class="method-name">accPageTitleTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [My Account] but found [Account Login]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at com.qa.opencart.test.AccountsPageTest.accPageTitleTest(AccountsPageTest.java:31)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="accPageUrlTest">
+                  </a> <!-- accPageUrlTest -->
+                  <span class="method-name">accPageUrlTest</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at com.qa.opencart.test.AccountsPageTest.accPageUrlTest(AccountsPageTest.java:39)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:808)
+	at org.testng.TestRunner.run(TestRunner.java:603)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:32)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Open_Cart_Test_Regression_Suite-class-failed -->
+          <div class="suite-Open_Cart_Test_Regression_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">com.qa.opencart.test.ProductInfoPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -190,14 +311,12 @@
                   </a> <!-- getProductInfoTest -->
                   <span class="method-name">getProductInfoTest</span>
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	expected [$2000] but found [$2,000.00]
+	expected [$2000.00] but found [$2,000.00]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at com.qa.opencart.test.ProductInfoPageTest.getProductInfoTest(ProductInfoPageTest.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com.qa.opencart.test.ProductInfoPageTest.getProductInfoTest(ProductInfoPageTest.java:66)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
@@ -206,7 +325,7 @@
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at org.testng.TestRunner.privateRun(TestRunner.java:808)
 	at org.testng.TestRunner.run(TestRunner.java:603)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
@@ -214,44 +333,15 @@
 	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)
 	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Open_Cart_Test_Regression_Suite-class-failed -->
-          <div class="suite-Open_Cart_Test_Regression_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.qa.opencart.test.ProductInfoPageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="productCountTest">
-                  </a> <!-- productCountTest -->
-                  <span class="method-name">productCountTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="productHeaderTest">
-                  </a> <!-- productHeaderTest -->
-                  <span class="method-name">productHeaderTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="productImagesTest">
-                  </a> <!-- productImagesTest -->
-                  <span class="method-name">productImagesTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Open_Cart_Test_Regression_Suite-class-passed -->
           <div class="suite-Open_Cart_Test_Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -291,28 +381,28 @@
           <div class="suite-Open_Cart_Test_Regression_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.qa.opencart.test.AccountsPageTest</span>
+              <span class="class-name">com.qa.opencart.test.ProductInfoPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AccountPageSectionListTest">
-                  </a> <!-- AccountPageSectionListTest -->
-                  <span class="method-name">AccountPageSectionListTest</span>
+                  <a name="productCountTest">
+                  </a> <!-- productCountTest -->
+                  <span class="method-name">productCountTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="accPageTitleTest">
-                  </a> <!-- accPageTitleTest -->
-                  <span class="method-name">accPageTitleTest</span>
+                  <a name="productHeaderTest">
+                  </a> <!-- productHeaderTest -->
+                  <span class="method-name">productHeaderTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="accPageUrlTest">
-                  </a> <!-- accPageUrlTest -->
-                  <span class="method-name">accPageUrlTest</span>
+                  <a name="productImagesTest">
+                  </a> <!-- productImagesTest -->
+                  <span class="method-name">productImagesTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -320,7 +410,7 @@
         </div> <!-- panel Open_Cart_Test_Regression_Suite -->
         <div panel-name="test-xml-Open_Cart_Test_Regression_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">E:\SeleniumTrainingWorkspace\CropinInterview\src\test\resources\testrunners\testng_regression.xml</span>
+            <span class="header-content">C:\Users\hivepro\eclipse-workspace\POM\src\test\resources\testrunners\testng_regression.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -389,52 +479,52 @@ data.addRows(11);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'getProductInfoTest')
 data.setCell(0, 2, 'com.qa.opencart.test.ProductInfoPageTest')
-data.setCell(0, 3, 19041);
+data.setCell(0, 3, 17434);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'productHeaderTest')
-data.setCell(1, 2, 'com.qa.opencart.test.ProductInfoPageTest')
-data.setCell(1, 3, 2390);
+data.setCell(1, 1, 'doLoginTest')
+data.setCell(1, 2, 'com.qa.opencart.test.LoginPageTest')
+data.setCell(1, 3, 4157);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'productImagesTest')
-data.setCell(2, 2, 'com.qa.opencart.test.ProductInfoPageTest')
-data.setCell(2, 3, 2118);
+data.setCell(2, 1, 'accPageTitleTest')
+data.setCell(2, 2, 'com.qa.opencart.test.AccountsPageTest')
+data.setCell(2, 3, 2011);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'accPageTitleTest')
-data.setCell(3, 2, 'com.qa.opencart.test.AccountsPageTest')
-data.setCell(3, 3, 2049);
+data.setCell(3, 1, 'productHeaderTest')
+data.setCell(3, 2, 'com.qa.opencart.test.ProductInfoPageTest')
+data.setCell(3, 3, 1432);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'doLoginTest')
-data.setCell(4, 2, 'com.qa.opencart.test.LoginPageTest')
-data.setCell(4, 3, 1565);
+data.setCell(4, 1, 'productImagesTest')
+data.setCell(4, 2, 'com.qa.opencart.test.ProductInfoPageTest')
+data.setCell(4, 3, 1312);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'productCountTest')
 data.setCell(5, 2, 'com.qa.opencart.test.ProductInfoPageTest')
-data.setCell(5, 3, 827);
+data.setCell(5, 3, 518);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'forgotPwdLinkTest')
-data.setCell(6, 2, 'com.qa.opencart.test.LoginPageTest')
-data.setCell(6, 3, 222);
+data.setCell(6, 1, 'AccountPageSectionListTest')
+data.setCell(6, 2, 'com.qa.opencart.test.AccountsPageTest')
+data.setCell(6, 3, 128);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'AccountPageSectionListTest')
-data.setCell(7, 2, 'com.qa.opencart.test.AccountsPageTest')
-data.setCell(7, 3, 98);
+data.setCell(7, 1, 'forgotPwdLinkTest')
+data.setCell(7, 2, 'com.qa.opencart.test.LoginPageTest')
+data.setCell(7, 3, 77);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'loginPageTitleTest')
 data.setCell(8, 2, 'com.qa.opencart.test.LoginPageTest')
-data.setCell(8, 3, 24);
+data.setCell(8, 3, 32);
 data.setCell(9, 0, 9)
 data.setCell(9, 1, 'loginPageUrlTest')
 data.setCell(9, 2, 'com.qa.opencart.test.LoginPageTest')
-data.setCell(9, 3, 16);
+data.setCell(9, 3, 15);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'accPageUrlTest')
 data.setCell(10, 2, 'com.qa.opencart.test.AccountsPageTest')
-data.setCell(10, 3, 9);
+data.setCell(10, 3, 7);
 window.suiteTableData['Open_Cart_Test_Regression_Suite']= { tableData: data, tableDiv: 'times-div-Open_Cart_Test_Regression_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Open_Cart_Test_Regression_Suite">
               </div> <!-- times-div-Open_Cart_Test_Regression_Suite -->
             </div> <!-- times-div -->
@@ -460,6 +550,13 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">setUp</span>
@@ -475,56 +572,38 @@ return data;
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">accPageSetup</span>
-                <span class="method-start">9574 ms</span>
-              </div> <!-- configuration-class before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">loginPageTitleTest</span>
-                <span class="method-start">9868 ms</span>
+                <span class="method-start">7538 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">loginPageUrlTest</span>
-                <span class="method-start">9902 ms</span>
+                <span class="method-start">7576 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">forgotPwdLinkTest</span>
-                <span class="method-start">9922 ms</span>
+                <span class="method-start">7592 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">productInfoSetup</span>
-                <span class="method-start">9959 ms</span>
+                <span class="method-start">7611 ms</span>
+              </div> <!-- configuration-class before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">accPageSetup</span>
+                <span class="method-start">7646 ms</span>
               </div> <!-- configuration-class before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">doLoginTest</span>
-                <span class="method-start">10151 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">AccountPageSectionListTest</span>
-                <span class="method-start">11189 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">accPageTitleTest</span>
-                <span class="method-start">11289 ms</span>
+                <span class="method-start">7670 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -533,44 +612,61 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">getProductInfoTest</span>
-                <span class="method-start">11591 ms</span>
+                <span class="method-start">11543 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">AccountPageSectionListTest</span>
+                <span class="method-start">11762 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11719 ms</span>
+                <span class="method-start">11829 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.AccountsPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">accPageTitleTest</span>
+                <span class="method-start">11893 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">accPageUrlTest</span>
-                <span class="method-start">13339 ms</span>
+                <span class="method-start">13906 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13349 ms</span>
+                <span class="method-start">13915 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.opencart.test.ProductInfoPageTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">productCountTest</span>
-                <span class="method-start">30635 ms</span>
+                <span class="method-start">28980 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">productHeaderTest</span>
-                <span class="method-start">31464 ms</span>
+                <span class="method-start">29499 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">productImagesTest</span>
-                <span class="method-start">33855 ms</span>
+                <span class="method-start">30932 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">35975 ms</span>
+                <span class="method-start">32245 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

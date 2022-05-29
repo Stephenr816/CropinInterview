@@ -14,7 +14,12 @@ public class AccountsPageTest extends BaseTest{
 	@BeforeClass
 	public void accPageSetup() {
 		
-		accPage = lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		try {
+			accPage = lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Test

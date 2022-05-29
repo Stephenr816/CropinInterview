@@ -43,10 +43,13 @@ public class LoginPage {
 		return elementUtil.doIsDisplayed(forgotPwdLink);
 	}
 	
-	public AccountsPage doLogin(String un, String pwd) {
+	public AccountsPage doLogin(String un, String pwd) throws InterruptedException {
 		
+		Thread.sleep(1000);
 		elementUtil.doSendKeys(username, un);
+		Thread.sleep(1000);
 		elementUtil.doSendKeys(password, pwd);
+		Thread.sleep(1000);
 		elementUtil.doClick(loginButton);
 		return new AccountsPage(driver);
 	}

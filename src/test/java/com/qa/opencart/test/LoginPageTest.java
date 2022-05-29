@@ -34,7 +34,12 @@ public class LoginPageTest extends BaseTest {
 	@Test(priority = 4)
 	public void doLoginTest() {
 		
-		lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		try {
+			lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 

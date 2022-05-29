@@ -16,14 +16,19 @@ public class ProductInfoPageTest extends BaseTest {
 	@BeforeClass
 	public void productInfoSetup() {
 		
-		accPage = lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		try {
+			accPage = lp.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	@Test
 	public void productCountTest() {
 		
 		searchResPage = accPage.searchProduct("Macbook");
-		Assert.assertTrue(searchResPage.getProductResultsCount() == 3);
+		Assert.assertTrue(searchResPage.getProductResultsCount() == 5);
 	}
 	
 	@Test
